@@ -14,3 +14,21 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['prefix' =>'admin'], function() {
+    Route::get('news/create','admin\NewsController@add');
+});
+
+
+//課題３
+Route::grorp(['prefix' =>'jp'], function() {
+    Route::get('news/create','jp\AAAController@bbb');
+});
+
+
+//課題４
+Route::grorp(['prefix' =>'admin'], function() {
+    Route::get('profile/create','admin\ProfileController@add');
+});
+Route::grorp(['prefix' =>'admin'], function() {
+    Route::get('profile/edit','admin\ProfileController@edit');
+});
