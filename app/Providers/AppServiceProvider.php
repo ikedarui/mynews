@@ -25,7 +25,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //以下を追記
         if (\App::environment('production')) {
-            \URL::ferceScheme('https');
+            \URL::forceScheme('https');
         }
     }
 }
